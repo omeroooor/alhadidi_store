@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--template id="alhadidi_store_carousel_rtl" inherit_id="theme_laze.s_collection_configure" name="Carousel RTL">
+        <xpath expr="//div[@class='owl-carousel thumbnails-slides multi_slider']" position="attributes">
+            <attribute name="class">owl-carousel thumbnails-slides multi_slider owl-rtl</attribute>
+	    </xpath> 
+	</template-->
+
+
+</odoo>
