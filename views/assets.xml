@@ -2,6 +2,8 @@
 <odoo>
     <template id="alhadidi_assets" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
+            <link t-if="lang_direction == 'rtl'" href="/alhadidi_store/static/src/css/fonts.css" rel="stylesheet"/>
+            <link t-if="lang_direction == 'rtl'" href="/alhadidi_store/static/src/css/custom.css" rel="stylesheet"/>
             <link t-if="lang_direction == 'rtl'" href="/alhadidi_store/static/src/css/rtl.css" rel="stylesheet"/>
 
 		    <script type="text/javascript" src="/alhadidi_store/static/src/js/theme_front.js"/> 
