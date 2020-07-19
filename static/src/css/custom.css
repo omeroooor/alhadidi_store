@@ -1,3 +1,8 @@
-*:not(.fa,.owl-next){
+*:not(.fa){
     font-family: Cairo-Regular, Lateef !important;
 }
+
+.owl-next, .owl-prev {
+    font-family: FontAwesome !important;
+}
+
