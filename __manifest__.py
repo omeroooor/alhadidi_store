@@ -2,7 +2,7 @@
     'name': 'Alhadidi Store',
     'summary': "Customizing Web store for Alhadidi Store",
     'version': '1.0',
-    'depends': ['theme_laze'],
+    'depends': ['web_rtl', 'theme_laze'],
     'data': [  
         #'data/product_public_categories.xml',
         'views/assets.xml',
