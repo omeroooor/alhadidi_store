@@ -6,7 +6,6 @@ odoo.define('alhadidi_store.carousel_rtl', function (require) {
     function initialize_owl(el){
         var rtl = false;
         if($('body').hasClass('rtl')) {rtl = true;}
-        console.log(rtl)
         el.owlCarousel({
             rtl: rtl,
             items: 4,
@@ -64,4 +63,62 @@ odoo.define('alhadidi_store.carousel_rtl', function (require) {
                 }
             },
       });
+});
+
+odoo.define('alhadidi_store.quality_product_slider_rtl', function (require) {
+    "use strict";
+    var laze_carousel = require('theme_laze.front_js');
+    var animation = require('web_editor.snippets.animation');
+    function initialize_owl(el){
+        var rtl = false;
+        if($('body').hasClass('rtl')) {rtl = true;}
+        el.owlCarousel({
+            rtl: rtl,
+            items: 4,
+            margin: 30,
+            navigation: true,
+            pagination: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                481: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                1024: {
+                    items: 4,
+                }
+            }
+
+        })
+    }
+    
+  animation.registry.advance_product_slider = animation.Class.extend({
+    selector : ".tqt_products_slider",
+        start: function (editMode) {
+            var self = this;
+			if (editMode)
+            {$('.tqt_products_slider .advance_product_slider').addClass("hidden");
+			}
+			if(!editMode){
+			var	tab_collection=parseInt(self.$target.attr('data-tab-id') || 0),
+				slider_id='tqt_products_slider'+new Date().getTime();
+
+            $.get("/shop/get_products_content",{'tab_id':self.$target.attr('data-tab-id') || 0,
+												'slider_id':slider_id,
+
+            									}).then(function( data ) {
+                if(data){                   
+                    self.$target.empty().append(data);
+					$(".tqt_products_slider").removeClass('hidden');
+					initialize_owl($(".tqt-pro-slide"));
+    				
+                }
+            });
+			}
+        }
+    });
 });
