@@ -13,3 +13,57 @@
 .as-product .asp-inner .pro-info {
     text-align: unset !important;
 }
+
+
+@media (min-width: 501px){
+    .mobile-mobile-cart {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px){
+    #cart_products {
+        display: none !important;
+    }
+    .oe_cart .well {
+        overflow-x: auto;
+        width: 100%;
+        display: block;
+    }
+
+    .mobile-mobile-cart {
+        overflow-x: auto;
+        width: 100%;
+        display: block;
+    }
+    .mobile-cart-item{
+        width: 100%;
+        margin-right: 1%;
+        margin-left: 1%;
+        background-color: #f9f9f9;
+        border: 1px solid #ebebeb;
+        padding: 10px;
+        margin: 10px;
+    }
+    .mobile-cart-item .item-image {
+        display: inline-block;
+        text-align: center;
+        width: 20%;
+    }
+    .mobile-cart-item .item-description {
+        display: inline-block;
+        vertical-align: top;
+        width: 79%;
+        vertical-align: bottom;
+    }
+    .mobile-cart-item .item-description .input-group {
+        width: 120px;
+    }
+    .mobile-cart-item .item-description .product-name {
+        width: 100%;
+    }
+    .mobile-cart-item .item-description .product-name a {
+        overflow-wrap: anywhere;
+    }
+}

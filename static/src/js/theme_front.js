@@ -122,3 +122,30 @@ odoo.define('alhadidi_store.quality_product_slider_rtl', function (require) {
         }
     });
 });
+
+
+
+odoo.define('alhadidi_store.mobile_cart', function (require) {
+    "use strict";
+
+    var website_sale = require('website_sale.website_sale');
+    if(!$('.js_delete_product').length) {
+        return $.Deferred().reject("DOM doesn't contain '.js_delete_product'");
+    }
+    $(document).ready(function(){
+        if($('.js_delete_product').length) {
+            $('.oe_cart').on('click', '.js_delete_product', function(e) {
+                e.preventDefault();
+                var link_line_id = $(this).data('line-id');
+                //console.log(link_line_id);
+                //$(this).closest('div').find('.js_quantity').val(0).trigger('change');
+                $(this).closest('div').parents('div').find('.js_quantity').each(function(){
+                    if($(this).data('line-id') == link_line_id) {
+                        //console.log($(this).data('line-id'));
+                        $(this).val(0).trigger('change');
+                    }
+                })
+            });
+        }
+    });
+});
