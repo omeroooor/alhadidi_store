@@ -6,3 +6,7 @@
     font-family: FontAwesome !important;
 }
 
+
+.as-product .asp-inner .pro-info h3 {
+    white-space: normal !important;
+}
