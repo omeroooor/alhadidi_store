@@ -293,7 +293,7 @@ msgstr "المتجر - أختر طريقة السداد"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.payment_sale_note
 msgid "I agree to the"
-msgstr "انا موافق على "
+msgstr "أوافق على "
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.payment_sale_note
@@ -457,7 +457,22 @@ msgstr "<i class=\"fa fa-shopping-cart\"/>\n"
 "                    سلة التسوق"
 
 
+#. module: website_sale
+#: model:ir.ui.view,arch_db:website_sale.cart
+msgid "Shopping Cart"
+msgstr "سلة التسوق"
 
+
+
+
+
+
+
+#. module: theme_laze
+#: model:ir.ui.view,arch_db:theme_laze.cart
+#: model:ir.ui.view,arch_db:theme_laze.product_brands
+msgid "<span>Shopping Cart</span>"
+msgstr "<span>سلة التسوق</span>"
 
 #. module: theme_laze
 #: model:ir.ui.view,arch_db:theme_laze.clear_all
@@ -593,3 +608,25 @@ msgstr "تحديث التعليق"
 #: model:ir.ui.view,arch_db:theme_laze.wishlist
 msgid "Your Whishlist is empty!"
 msgstr "ليس لديك عناصر بقائمة المفضلة"
+
+
+
+#. module: website_sale_options
+#: model:ir.ui.view,arch_db:website_sale_options.modal
+msgid "<i class=\"fa fa-chevron-left\"/> <span class=\"hidden-xs\">Continue Shopping</span><span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<i class=\"fa fa-chevron-left\"/> <span class=\"hidden-xs\">عودة للتسوق</span><span class=\"visible-xs-inline\">عودة</span>"
+
+#. module: website_sale_options
+#: model:ir.ui.view,arch_db:website_sale_options.modal
+msgid "<i class=\"fa fa-shopping-cart fa-fw\"/> <span class=\"hidden-xs\">Proceed to checkout</span><span class=\"visible-xs-inline\">Checkout</span>"
+msgstr "<i class=\"fa fa-shopping-cart fa-fw\"/> <span class=\"hidden-xs\">إكمال الشراء</span><span class=\"visible-xs-inline\">شراء</span>"
+
+#. module: website_sale_options
+#: model:ir.ui.view,arch_db:website_sale_options.modal
+msgid "<small>Remove from cart</small>"
+msgstr "<small>إزالة من السلة</small>"
+
+#. module: website_sale_options
+#: model:ir.ui.view,arch_db:website_sale_options.modal
+msgid "<span class=\"js_item\">1 Item</span><span class=\"js_items hidden\">5 Items</span><br/>"
+msgstr "<span class=\"js_item\">عنصر واحد</span><span class=\"js_items hidden\">5 عناصر</span><br/>"
